@@ -243,6 +243,36 @@ Images by [Amonrat Rungreangfangsai](https://www.vecteezy.com/members/amy1313)
 ]
 
 ---
+## Motivation for using [`plotly`](https://plotly.com/r/) and [`trelliscopejs`](https://hafen.github.io/trelliscopejs/)
+
+.pull-left[
+Using [`plotly`](https://plotly.com/r/) to create interactive plots is moving in the right direction. 
+
+However, distribution of such results to collaborators/managers remains a challenge. Interactive plots cannot be stored in pdf files.
+
+[Shiny](https://shiny.rstudio.com/) was considered but
+  * Lack expertises to maintain a secure web server to run [Shiny](https://shiny.rstudio.com/) applications.
+  
+  * Cannot expect collaborators/managers to install/run R packages and code to view the results.
+]
+
+.pull-right[
+```{r, out.width = "90%"}
+knitr::include_graphics("images/Motivation4.JPG")
+```
+]
+
+.left[.footnote[
+[`plotly`](https://plotly.com/r/) logo from [Wikimedia](https://commons.wikimedia.org/wiki/File:Plotly_logo_for_digital_final_%286%29.png)
+
+[`trelliscopejs`](https://hafen.github.io/trelliscopejs/) hex logo from the R package's [GitHub page](https://github.com/hafen/trelliscopejs)
+]
+]
+
+.center[.footnote[https://jauntyjjs.github.io/RMedicine2022 [`r fa(name = "file-pdf")`](https://jauntyjjs.github.io/RMedicine2022/index.pdf)]
+]
+
+---
 
 <p align="center">
 <iframe width="1000" height="600" src="https://jauntyjjs.github.io/Trelliscopejs_In_Quarto_Supplementary1/"></iframe>
