@@ -15,7 +15,6 @@ output:
 editor_options:
   chunk_output_type: consolex
 ---
-
 ```{r setup, include=FALSE}
 options(htmltools.dir.version = FALSE)
 knitr::opts_chunk$set(echo = FALSE, fig.align = "center", out.width = "90%")
@@ -27,7 +26,8 @@ library(xaringanthemer)
 library(xaringanExtra)
 ```
 
-```{r screenshot function, include=FALSE}
+
+```{r screenshot, include=FALSE}
 #' Screenshot Your Title Slide for Share Image
 #'
 #' Takes a screenshot of your title slide for sharing on Twitter
@@ -62,7 +62,7 @@ screenshot_share_image <- function(
   path_image
 }
 
-screenshot_share_image("index.Rmd")
+#screenshot_share_image("index.Rmd")
 ```
 
 
@@ -103,10 +103,10 @@ meta() %>%
 ```
 
 ```{r xaringanExtra-share-again, echo=FALSE}
-#xaringanExtra::embed_xaringan(
-#  url = "https://jauntyjjs.github.io/PyDataGlobal2021Talk",
+# xaringanExtra::embed_xaringan(
+#  url = "https://jauntyjjs.github.io/RMedicine2022",
 #  ratio = "16:9"
-#)
+# )
 xaringanExtra::use_share_again()
 ```
 
@@ -139,7 +139,7 @@ knitr::include_graphics("images/title.JPG")
 ]
 ]
 
-.center[.footnote[https://jauntyjjs.github.io/PyDataGlobal2021Talk [`r fa(name = "file-pdf")`](https://jauntyjjs.github.io/PyDataGlobal2021Talk/PyDataGlobal2021Talk.pdf)]
+.center[.footnote[https://jauntyjjs.github.io/RMedicine2022 [`r fa(name = "file-pdf")`](https://jauntyjjs.github.io/RMedicine2022/index.pdf)]
 ]
 
 ---
@@ -149,7 +149,7 @@ knitr::include_graphics("images/title.JPG")
 knitr::include_graphics("images/Targeted_Lipidomics.JPG")
 ```
 
-.center[.footnote[https://jauntyjjs.github.io/PyDataGlobal2021Talk [`r fa(name = "file-pdf")`](https://jauntyjjs.github.io/PyDataGlobal2021Talk/PyDataGlobal2021Talk.pdf)]
+.center[.footnote[https://jauntyjjs.github.io/RMedicine2022 [`r fa(name = "file-pdf")`](https://jauntyjjs.github.io/RMedicine2022/index.pdf)]
 ]
 
 ---
@@ -164,7 +164,7 @@ knitr::include_graphics("images/Targeted_Lipidomics.JPG")
 knitr::include_graphics("images/Unwanted_Variation.JPG")
 ```
 
-.center[.footnote[https://jauntyjjs.github.io/PyDataGlobal2021Talk [`r fa(name = "file-pdf")`](https://jauntyjjs.github.io/PyDataGlobal2021Talk/PyDataGlobal2021Talk.pdf)]
+.center[.footnote[https://jauntyjjs.github.io/RMedicine2022 [`r fa(name = "file-pdf")`](https://jauntyjjs.github.io/RMedicine2022/index.pdf)]
 ]
 ---
 ## Quality Control (QC) Samples
@@ -179,7 +179,7 @@ knitr::include_graphics("images/BQC_Intro.JPG")
 
 .left[.footnote[Pooled sample image from [Broadhurst et. al. 2018](https://doi.org/10.1007/s11306-018-1367-3)]]
 
-.center[.footnote[https://jauntyjjs.github.io/PyDataGlobal2021Talk [`r fa(name = "file-pdf")`](https://jauntyjjs.github.io/PyDataGlobal2021Talk/PyDataGlobal2021Talk.pdf)]
+.center[.footnote[https://jauntyjjs.github.io/RMedicine2022 [`r fa(name = "file-pdf")`](https://jauntyjjs.github.io/RMedicine2022/index.pdf)]
 ]
 
 ---
@@ -195,7 +195,7 @@ knitr::include_graphics("images/Injection_Sequence_Plot.JPG")
 
 .left[.footnote[PDF image from [Wikimedia](https://commons.wikimedia.org/wiki/Category:PDF_icons)]]
 
-.center[.footnote[https://jauntyjjs.github.io/PyDataGlobal2021Talk [`r fa(name = "file-pdf")`](https://jauntyjjs.github.io/PyDataGlobal2021Talk/PyDataGlobal2021Talk.pdf)]
+.center[.footnote[https://jauntyjjs.github.io/RMedicine2022 [`r fa(name = "file-pdf")`](https://jauntyjjs.github.io/RMedicine2022/index.pdf)]
 ]
 
 ---
@@ -209,7 +209,7 @@ Static bar charts and scatter plots will not work.
 knitr::include_graphics("images/Motivation1.JPG")
 ```
 
-.center[.footnote[https://jauntyjjs.github.io/PyDataGlobal2021Talk [`r fa(name = "file-pdf")`](https://jauntyjjs.github.io/PyDataGlobal2021Talk/PyDataGlobal2021Talk.pdf)]
+.center[.footnote[https://jauntyjjs.github.io/RMedicine2022 [`r fa(name = "file-pdf")`](https://jauntyjjs.github.io/RMedicine2022/index.pdf)]
 ]
 
 ---
@@ -221,7 +221,7 @@ Number of transitions have increased to over $500$. This give a $> 500$-pages pd
 knitr::include_graphics("images/Motivation2.JPG")
 ```
 
-.center[.footnote[https://jauntyjjs.github.io/PyDataGlobal2021Talk [`r fa(name = "file-pdf")`](https://jauntyjjs.github.io/PyDataGlobal2021Talk/PyDataGlobal2021Talk.pdf)]
+.center[.footnote[https://jauntyjjs.github.io/RMedicine2022 [`r fa(name = "file-pdf")`](https://jauntyjjs.github.io/RMedicine2022/index.pdf)]
 ]
 
 ---
@@ -239,7 +239,7 @@ Images by [Amonrat Rungreangfangsai](https://www.vecteezy.com/members/amy1313)
 ]
 ]
 
-.center[.footnote[https://jauntyjjs.github.io/PyDataGlobal2021Talk [`r fa(name = "file-pdf")`](https://jauntyjjs.github.io/PyDataGlobal2021Talk/PyDataGlobal2021Talk.pdf)]
+.center[.footnote[https://jauntyjjs.github.io/RMedicine2022 [`r fa(name = "file-pdf")`](https://jauntyjjs.github.io/RMedicine2022/index.pdf)]
 ]
 
 ---
@@ -248,7 +248,7 @@ Images by [Amonrat Rungreangfangsai](https://www.vecteezy.com/members/amy1313)
 <iframe width="1000" height="600" src="https://jauntyjjs.github.io/Trelliscopejs_In_Quarto_Supplementary1/"></iframe>
 </p>
 
-.center[.footnote[https://jauntyjjs.github.io/PyDataGlobal2021Talk [`r fa(name = "file-pdf")`](https://jauntyjjs.github.io/PyDataGlobal2021Talk/PyDataGlobal2021Talk.pdf)]
+.center[.footnote[https://jauntyjjs.github.io/RMedicine2022 [`r fa(name = "file-pdf")`](https://jauntyjjs.github.io/RMedicine2022/index.pdf)]
 ]
 
 ---
@@ -266,7 +266,7 @@ Images from [Wolrab et. al 2022](https://doi.org/10.1038/s41467-021-27765-9)
 ]
 ]
 
-.center[.footnote[https://jauntyjjs.github.io/PyDataGlobal2021Talk [`r fa(name = "file-pdf")`](https://jauntyjjs.github.io/PyDataGlobal2021Talk/PyDataGlobal2021Talk.pdf)]
+.center[.footnote[https://jauntyjjs.github.io/RMedicine2022 [`r fa(name = "file-pdf")`](https://jauntyjjs.github.io/RMedicine2022/index.pdf)]
 ]
 
 ---
@@ -287,7 +287,7 @@ Use [`manipulateWidget::combineWidgets`](https://cran.r-project.org/web/packages
 knitr::include_graphics("images/Combined_Plots.JPG")
 ```
 
-.center[.footnote[https://jauntyjjs.github.io/PyDataGlobal2021Talk [`r fa(name = "file-pdf")`](https://jauntyjjs.github.io/PyDataGlobal2021Talk/PyDataGlobal2021Talk.pdf)]
+.center[.footnote[https://jauntyjjs.github.io/RMedicine2022 [`r fa(name = "file-pdf")`](https://jauntyjjs.github.io/RMedicine2022/index.pdf)]
 ]
 
 ---
@@ -299,7 +299,7 @@ Providing metadata information as `trelliscopejs` cognostics can help to improve
 knitr::include_graphics("images/Cognostics.JPG")
 ```
 
-.center[.footnote[https://jauntyjjs.github.io/PyDataGlobal2021Talk [`r fa(name = "file-pdf")`](https://jauntyjjs.github.io/PyDataGlobal2021Talk/PyDataGlobal2021Talk.pdf)]
+.center[.footnote[https://jauntyjjs.github.io/RMedicine2022 [`r fa(name = "file-pdf")`](https://jauntyjjs.github.io/RMedicine2022/index.pdf)]
 ]
 
 ---
@@ -311,7 +311,7 @@ To export a `trelliscopejs` object.
 knitr::include_graphics("images/Distribution1.JPG")
 ```
 
-.center[.footnote[https://jauntyjjs.github.io/PyDataGlobal2021Talk [`r fa(name = "file-pdf")`](https://jauntyjjs.github.io/PyDataGlobal2021Talk/PyDataGlobal2021Talk.pdf)]
+.center[.footnote[https://jauntyjjs.github.io/RMedicine2022 [`r fa(name = "file-pdf")`](https://jauntyjjs.github.io/RMedicine2022/index.pdf)]
 ]
 
 ---
@@ -323,7 +323,7 @@ To export a Quarto document with `trelliscopejs` object.
 knitr::include_graphics("images/Distribution2.JPG")
 ```
 
-.center[.footnote[https://jauntyjjs.github.io/PyDataGlobal2021Talk [`r fa(name = "file-pdf")`](https://jauntyjjs.github.io/PyDataGlobal2021Talk/PyDataGlobal2021Talk.pdf)]
+.center[.footnote[https://jauntyjjs.github.io/RMedicine2022 [`r fa(name = "file-pdf")`](https://jauntyjjs.github.io/RMedicine2022/index.pdf)]
 ]
 
 ---
@@ -335,7 +335,7 @@ Exported examples are found in the below [GitHub page](https://github.com/Jaunty
 knitr::include_graphics("images/Distribution3.JPG")
 ```
 
-.center[.footnote[https://jauntyjjs.github.io/PyDataGlobal2021Talk [`r fa(name = "file-pdf")`](https://jauntyjjs.github.io/PyDataGlobal2021Talk/PyDataGlobal2021Talk.pdf)]
+.center[.footnote[https://jauntyjjs.github.io/RMedicine2022 [`r fa(name = "file-pdf")`](https://jauntyjjs.github.io/RMedicine2022/index.pdf)]
 ]
 
 ---
@@ -366,5 +366,5 @@ Images by [Amonrat Rungreangfangsai](https://www.vecteezy.com/members/amy1313)
 ]
 ]
 
-.center[.footnote[https://jauntyjjs.github.io/PyDataGlobal2021Talk [`r fa(name = "file-pdf")`](https://jauntyjjs.github.io/PyDataGlobal2021Talk/PyDataGlobal2021Talk.pdf)]
+.center[.footnote[https://jauntyjjs.github.io/RMedicine2022 [`r fa(name = "file-pdf")`](https://jauntyjjs.github.io/RMedicine2022/index.pdf)]
 ]
