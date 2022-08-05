@@ -143,18 +143,31 @@ knitr::include_graphics("images/title.JPG")
 ]
 ]
 
-.center[.footnote[https://jauntyjjs.github.io/RMedicine2022 [`r fa(name = "file-pdf")`](https://jauntyjjs.github.io/RMedicine2022/index.pdf)]
+.center[.footnote[https://jauntyjjs.github.io/RMedicine2022 [`r fa(name = "link")`](https://jauntyjjs.github.io/RMedicine2022) [`r fa(name = "github")`](https://github.com/JauntyJJS/RMedicine2022) [`r fa(name = "file-pdf")`](https://jauntyjjs.github.io/RMedicine2022/index.pdf)]
 ]
 
 ---
 ## How Lipids are measured (Targeted Lipidomics)
 
 ```{r, out.width = "90%"}
+#| fig.alt = 
+#| "Figure showing the workflow of how lipids are measured in a targeted
+#| lipidomics settings. Samples are first converted to lipid extracts.
+#| From a given list of transitions to measure, lipids in the extracts are 
+#| measured using liquid chromatography and mass spectrometry. In the example,
+#| a transition from an internal standard Ceramide d 18 1 12 0 is measured. 
+#| This results in chromatogram peaks which the user needs to 
+#| integrate the area under curve. In the case of the internal standard 
+#| Ceramide d 18 1 12 0, it is 479025.  
+#| After the peaks are integrated for all samples and transtions,
+#| the peak area data is exported for further processing."
+
 knitr::include_graphics("images/Targeted_Lipidomics.JPG")
 ```
 
-.center[.footnote[https://jauntyjjs.github.io/RMedicine2022 [`r fa(name = "file-pdf")`](https://jauntyjjs.github.io/RMedicine2022/index.pdf)]
+.center[.footnote[https://jauntyjjs.github.io/RMedicine2022 [`r fa(name = "link")`](https://jauntyjjs.github.io/RMedicine2022) [`r fa(name = "github")`](https://github.com/JauntyJJS/RMedicine2022) [`r fa(name = "file-pdf")`](https://jauntyjjs.github.io/RMedicine2022/index.pdf)]
 ]
+
 
 ---
 ## Source of "Unwanted" Variation
@@ -165,11 +178,17 @@ knitr::include_graphics("images/Targeted_Lipidomics.JPG")
   * Contaminant ions
   
 ```{r, out.width = "90%"}
+#| fig.alt = 
+#| "Figure showing the stages in the targeted lipidomics settings in which
+#| unwanted or non biological variation can occur. It is usually during the 
+#| stage of lipid extraction or measruement."
+#| 
 knitr::include_graphics("images/Unwanted_Variation.JPG")
 ```
 
-.center[.footnote[https://jauntyjjs.github.io/RMedicine2022 [`r fa(name = "file-pdf")`](https://jauntyjjs.github.io/RMedicine2022/index.pdf)]
+.center[.footnote[https://jauntyjjs.github.io/RMedicine2022 [`r fa(name = "link")`](https://jauntyjjs.github.io/RMedicine2022) [`r fa(name = "github")`](https://github.com/JauntyJJS/RMedicine2022) [`r fa(name = "file-pdf")`](https://jauntyjjs.github.io/RMedicine2022/index.pdf)]
 ]
+
 ---
 ## Quality Control (QC) Samples
 
@@ -178,13 +197,23 @@ Quality control samples helps to check the severity of unwanted variation.
 One example is the Batch Quality Control (BQC) to measure variation during lipid extraction and measurement.
 
 ```{r, out.width = "100%"}
+#| fig.alt = 
+#| "Two figures showing what is a batch quality control (BQC). Left figure shows
+#| that BQC samples are created by first pooling the sample aliquots. The pooled
+#| sample is then aliquoted into smaller amounts in new eppendorf tubes. These
+#| pooled samples in the eppendorf tubes are the BQC samples. Right figure shows
+#| where in the injection sequence are the BQC samples place. They are usually placed
+#| in between samples at regular intervals, for example every five samples, as well as
+#| before the first sample and after the last sample."
+ 
 knitr::include_graphics("images/BQC_Intro.JPG")
 ```
 
 .left[.footnote[Pooled sample image from [Broadhurst et. al. 2018](https://doi.org/10.1007/s11306-018-1367-3)]]
 
-.center[.footnote[https://jauntyjjs.github.io/RMedicine2022 [`r fa(name = "file-pdf")`](https://jauntyjjs.github.io/RMedicine2022/index.pdf)]
+.center[.footnote[https://jauntyjjs.github.io/RMedicine2022 [`r fa(name = "link")`](https://jauntyjjs.github.io/RMedicine2022) [`r fa(name = "github")`](https://github.com/JauntyJJS/RMedicine2022) [`r fa(name = "file-pdf")`](https://jauntyjjs.github.io/RMedicine2022/index.pdf)]
 ]
+
 
 ---
 ## Quality Control Plot
@@ -194,13 +223,24 @@ An injection sequence bar chart with some statistical summary is created for eac
 Report results as a pdf file of injection sequence bar charts. (One transition per page)
 
 ```{r, out.width = "90%"}
+#| fig.alt = 
+#| "Figure showing an injection sequence of internal standard 
+#| Ceramide d 18 1 12 0 as a bar chart. The y axis is peak area while
+#| the x axis is the injection sequence. The different colours on the
+#| bar chart repsresent the different QC sample type. The important ones
+#| are the ones in blue representing the BQC. The coefficient of variation
+#| of the BQC is around 0.09 which is a low value. Hence, 
+#| the internal standard Ceramide d 18 1 12 0 has a low interference from
+#| unwanted sources. This injection sequence bar chart is exported as a pdf file."
+
 knitr::include_graphics("images/Injection_Sequence_Plot.JPG")
 ```
 
 .left[.footnote[PDF image from [Wikimedia](https://commons.wikimedia.org/wiki/Category:PDF_icons)]]
 
-.center[.footnote[https://jauntyjjs.github.io/RMedicine2022 [`r fa(name = "file-pdf")`](https://jauntyjjs.github.io/RMedicine2022/index.pdf)]
+.center[.footnote[https://jauntyjjs.github.io/RMedicine2022 [`r fa(name = "link")`](https://jauntyjjs.github.io/RMedicine2022) [`r fa(name = "github")`](https://github.com/JauntyJJS/RMedicine2022) [`r fa(name = "file-pdf")`](https://jauntyjjs.github.io/RMedicine2022/index.pdf)]
 ]
+
 
 ---
 ## Motivation for using [`plotly`](https://plotly.com/r/) and [`trelliscopejs`](https://hafen.github.io/trelliscopejs/)
@@ -210,11 +250,20 @@ Number of samples are getting larger (increase to few thousands).
 Static bar charts and scatter plots will not work.
 
 ```{r, out.width = "100%"}
+#| fig.alt = 
+#| "Figure showing an injection sequence of internal standard 
+#| Ceramide d 18 1 12 0 as a bar chart. The y axis is peak area while
+#| the x axis is the injection sequence. The different colours on the
+#| bar chart repsresent the different QC sample type. A black arrow is shown
+#| at the bottom right of the plot connecting to the x-axis. The arrow
+#| highlights that the injection sequence can increase to a few thousands."
+
 knitr::include_graphics("images/Motivation1.JPG")
 ```
 
-.center[.footnote[https://jauntyjjs.github.io/RMedicine2022 [`r fa(name = "file-pdf")`](https://jauntyjjs.github.io/RMedicine2022/index.pdf)]
+.center[.footnote[https://jauntyjjs.github.io/RMedicine2022 [`r fa(name = "link")`](https://jauntyjjs.github.io/RMedicine2022) [`r fa(name = "github")`](https://github.com/JauntyJJS/RMedicine2022) [`r fa(name = "file-pdf")`](https://jauntyjjs.github.io/RMedicine2022/index.pdf)]
 ]
+
 
 ---
 ## Motivation for using [`plotly`](https://plotly.com/r/) and [`trelliscopejs`](https://hafen.github.io/trelliscopejs/)
@@ -222,11 +271,18 @@ knitr::include_graphics("images/Motivation1.JPG")
 Number of transitions have increased to over $500$. This give a $> 500$-pages pdf file full of plots.
 
 ```{r, out.width = "100%"}
+#| fig.alt = 
+#| "Figure showing a long transition list contaning more than 500 transitions.
+#| The arrow on the right of the transition list leads to pictures of
+#| more than 500 injection sequence plots."
+
+
 knitr::include_graphics("images/Motivation2.JPG")
 ```
 
-.center[.footnote[https://jauntyjjs.github.io/RMedicine2022 [`r fa(name = "file-pdf")`](https://jauntyjjs.github.io/RMedicine2022/index.pdf)]
+.center[.footnote[https://jauntyjjs.github.io/RMedicine2022 [`r fa(name = "link")`](https://jauntyjjs.github.io/RMedicine2022) [`r fa(name = "github")`](https://github.com/JauntyJJS/RMedicine2022) [`r fa(name = "file-pdf")`](https://jauntyjjs.github.io/RMedicine2022/index.pdf)]
 ]
+
 
 ---
 ## Motivation for using [`plotly`](https://plotly.com/r/) and [`trelliscopejs`](https://hafen.github.io/trelliscopejs/)
@@ -234,6 +290,13 @@ knitr::include_graphics("images/Motivation2.JPG")
 Different QC sample types give rise to different plot type, resulting in .red[multiple] $> 500$-page.red[s] pdf files.
 
 ```{r, out.width = "100%"}
+#| fig.alt = 
+#| "Left figure showing a long list of QC sample types, leading to new plots such as
+#| a raincloud plot as well as a dilution plot. This give rise to an output of 
+#| many pdf files, each at least 500 pages long. Right figure is showing a worker 
+#| overwhelmed with many files of plots. The worker is carrying a sign calling for help."
+
+
 knitr::include_graphics("images/Motivation3.JPG")
 ```
 
@@ -243,8 +306,9 @@ Images by [Amonrat Rungreangfangsai](https://www.vecteezy.com/members/amy1313)
 ]
 ]
 
-.center[.footnote[https://jauntyjjs.github.io/RMedicine2022 [`r fa(name = "file-pdf")`](https://jauntyjjs.github.io/RMedicine2022/index.pdf)]
+.center[.footnote[https://jauntyjjs.github.io/RMedicine2022 [`r fa(name = "link")`](https://jauntyjjs.github.io/RMedicine2022) [`r fa(name = "github")`](https://github.com/JauntyJJS/RMedicine2022) [`r fa(name = "file-pdf")`](https://jauntyjjs.github.io/RMedicine2022/index.pdf)]
 ]
+
 
 ---
 ## Motivation for using [`plotly`](https://plotly.com/r/) and [`trelliscopejs`](https://hafen.github.io/trelliscopejs/)
@@ -252,16 +316,25 @@ Images by [Amonrat Rungreangfangsai](https://www.vecteezy.com/members/amy1313)
 .pull-left[
 Using [`plotly`](https://plotly.com/r/) to create interactive plots is moving in the right direction. 
 
-However, distribution of such results to collaborators/managers remains a challenge. Interactive plots cannot be stored in pdf files.
+However, distribution of such results to collaborators/managers remains a challenge. 
+
+Interactive plots cannot be stored in pdf files.
 
 [Shiny](https://shiny.rstudio.com/) was considered but
   * Lack expertises to maintain a secure web server to run [Shiny](https://shiny.rstudio.com/) applications.
   
-  * Cannot expect collaborators/managers to install/run R packages and code to view the results.
+  * Cannot expect collaborators/managers to install/run R packages and code to rebuild the [Shiny](https://shiny.rstudio.com/) application just to view the results.
 ]
 
 .pull-right[
 ```{r, out.width = "90%"}
+#| fig.alt = 
+#| "Figure showing the a workflow using plotly and trelliscopejs. 
+#| plotly and trelliscopejs represented by ther logos are used to create
+#| a folder called Dilution Plot Folder. The Dilution Plot Folder contains
+#| a appfile folder, a lib folder and a html file call index. The folder is
+#| then compressed into a zip folder called Dilution Plot Folder."
+#| 
 knitr::include_graphics("images/Motivation4.JPG")
 ```
 ]
@@ -273,17 +346,19 @@ knitr::include_graphics("images/Motivation4.JPG")
 ]
 ]
 
-.center[.footnote[https://jauntyjjs.github.io/RMedicine2022 [`r fa(name = "file-pdf")`](https://jauntyjjs.github.io/RMedicine2022/index.pdf)]
+.center[.footnote[https://jauntyjjs.github.io/RMedicine2022 [`r fa(name = "link")`](https://jauntyjjs.github.io/RMedicine2022) [`r fa(name = "github")`](https://github.com/JauntyJJS/RMedicine2022) [`r fa(name = "file-pdf")`](https://jauntyjjs.github.io/RMedicine2022/index.pdf)]
 ]
+
 
 ---
 
 <p align="center">
-<iframe width="1000" height="600" src="https://jauntyjjs.github.io/Trelliscopejs_In_Quarto_Supplementary1/"></iframe>
+<iframe width="1000" height="600" src="https://jauntyjjs.github.io/Trelliscopejs_In_Quarto_Supplementary1/" alt="A trelliscopejs result displaying the injection sequence plot and dilution plot. Users can interact with the plot results to draw useful information. Samples can be filtered by clicking on the legends. Sliders are provided to give the samples a closer look. Figures can be filtered and sorted by different metadata properties." ></iframe>
 </p>
 
-.center[.footnote[https://jauntyjjs.github.io/RMedicine2022 [`r fa(name = "file-pdf")`](https://jauntyjjs.github.io/RMedicine2022/index.pdf)]
+.center[.footnote[https://jauntyjjs.github.io/RMedicine2022 [`r fa(name = "link")`](https://jauntyjjs.github.io/RMedicine2022) [`r fa(name = "github")`](https://github.com/JauntyJJS/RMedicine2022) [`r fa(name = "file-pdf")`](https://jauntyjjs.github.io/RMedicine2022/index.pdf)]
 ]
+
 
 ---
 ## Quarto Example
@@ -291,6 +366,15 @@ knitr::include_graphics("images/Motivation4.JPG")
 Thanks to open science, I am able to create a walk through example using Quarto [`r fa(name = "link")`](https://jauntyjjs.github.io/Trelliscopejs_In_Quarto_Example/) [`r fa(name = "github")`](https://github.com/JauntyJJS/Trelliscopejs_In_Quarto_Example).
 
 ```{r, out.width = "90%"}
+#| fig.alt = 
+#| "Left figure showing a Nature Communications paper by Wolrab et. al. 
+#| published on 10 January 2022. The paper is titled Lipidomics profiling 
+#| of human serum enables detection of pancreatic cancer. This is followed 
+#| by highlighted text showing where to download the dataset used for the
+#| paper. Right figure shows the use of the published data set to create
+#| a Quarto interactive document with the use of plotly and trelliscopejs."
+
+
 knitr::include_graphics("images/Open_Science.JPG")
 ```
 
@@ -300,8 +384,9 @@ Images from [Wolrab et. al 2022](https://doi.org/10.1038/s41467-021-27765-9)
 ]
 ]
 
-.center[.footnote[https://jauntyjjs.github.io/RMedicine2022 [`r fa(name = "file-pdf")`](https://jauntyjjs.github.io/RMedicine2022/index.pdf)]
+.center[.footnote[https://jauntyjjs.github.io/RMedicine2022 [`r fa(name = "link")`](https://jauntyjjs.github.io/RMedicine2022) [`r fa(name = "github")`](https://github.com/JauntyJJS/RMedicine2022) [`r fa(name = "file-pdf")`](https://jauntyjjs.github.io/RMedicine2022/index.pdf)]
 ]
+
 
 ---
 ## Vector Of Plots
@@ -309,20 +394,39 @@ Images from [Wolrab et. al 2022](https://doi.org/10.1038/s41467-021-27765-9)
 Use [`dplyr::mutate`](https://dplyr.tidyverse.org/reference/mutate.html) and [`trelliscopejs::pmap_plot`](https://hafen.github.io/trelliscopejs/reference/map2_plot.html) to save [`plotly`](https://plotly.com/r/) plots as a new column.
 
 ```{r, out.width = "100%"}
+#| fig.alt = 
+#| "Figure showing how to create a new column containing a vector of plots.
+#| dplyr mutate is used to create the new column called dilution panel.
+#| trelliscopejs pmap plot is used to create the individual dilution plots
+#| in plotly. To print the dilution plot of the first row, type the command
+#| dilution_plot_table$dilution_panel[[1]]. The dilution plot results can
+#| be seen on the rightmost figure."
+
 knitr::include_graphics("images/Vector_of_Plots.JPG")
 ```
 
+.center[.footnote[https://jauntyjjs.github.io/RMedicine2022 [`r fa(name = "link")`](https://jauntyjjs.github.io/RMedicine2022) [`r fa(name = "github")`](https://github.com/JauntyJJS/RMedicine2022) [`r fa(name = "file-pdf")`](https://jauntyjjs.github.io/RMedicine2022/index.pdf)]
+]
 ---
 ## Patching `plotly` Plots
 
 Use [`manipulateWidget::combineWidgets`](https://cran.r-project.org/web/packages/manipulateWidget/vignettes/manipulateWidgets.html) and [`plotly::subplot`](https://plotly.com/r/subplots/) to patch different [`plotly`](https://plotly.com/r/) plots.
 
 ```{r, out.width = "100%"}
+#| fig.alt = 
+#| "Left figure showing how to use the combined widgets function from 
+#| manipulate widget to arrange four dilution plots in tow rows and cols. 
+#| Simply set parameters ncol = 2 and nrow = 2. Right figure showing 
+#| how to use subplot function from plotly to allow the injection
+#| sequence plot and the raincloud plot to share the same x-axis and legend.
+#| This is done by setting share Y as TRUE."
+
 knitr::include_graphics("images/Combined_Plots.JPG")
 ```
 
-.center[.footnote[https://jauntyjjs.github.io/RMedicine2022 [`r fa(name = "file-pdf")`](https://jauntyjjs.github.io/RMedicine2022/index.pdf)]
+.center[.footnote[https://jauntyjjs.github.io/RMedicine2022 [`r fa(name = "link")`](https://jauntyjjs.github.io/RMedicine2022) [`r fa(name = "github")`](https://github.com/JauntyJJS/RMedicine2022) [`r fa(name = "file-pdf")`](https://jauntyjjs.github.io/RMedicine2022/index.pdf)]
 ]
+
 
 ---
 ## `trelliscopejs` cognostics
@@ -330,35 +434,76 @@ knitr::include_graphics("images/Combined_Plots.JPG")
 Providing metadata information as `trelliscopejs` cognostics can help to improve the user experience. Refer to the Quarto [`r fa(name = "link")`](https://jauntyjjs.github.io/Trelliscopejs_In_Quarto_Example/) [`r fa(name = "github")`](https://github.com/JauntyJJS/Trelliscopejs_In_Quarto_Example) example on how to do it.
 
 ```{r, out.width = "80%"}
+#| fig.alt = 
+#| "Left figure showing how to find the list of cognostics in a result
+#| generated by trelliscopejs. Just click on the information button 
+#| beside the trellis plot title, in the example, the title is Injection
+#| sequence plot. Following left bottom figure shows a filter panel with
+#| the cognostic information of product ion button displayed as 'ions created from
+#| fragmentation of the precursor ions' when the mouse if hover on the
+#| product ion button. Right figure shows a Quarto document telling users how
+#| to create trelliscopejs cognostics from metadata information."
+
+
 knitr::include_graphics("images/Cognostics.JPG")
 ```
 
-.center[.footnote[https://jauntyjjs.github.io/RMedicine2022 [`r fa(name = "file-pdf")`](https://jauntyjjs.github.io/RMedicine2022/index.pdf)]
+.center[.footnote[https://jauntyjjs.github.io/RMedicine2022 [`r fa(name = "link")`](https://jauntyjjs.github.io/RMedicine2022) [`r fa(name = "github")`](https://github.com/JauntyJJS/RMedicine2022) [`r fa(name = "file-pdf")`](https://jauntyjjs.github.io/RMedicine2022/index.pdf)]
 ]
+
 
 ---
 ## Results Distribution
 
 To export a `trelliscopejs` object.
 
-```{r, out.width = "75%"}
+```{r, out.width = "70%"}
+#| fig.alt = 
+#| "Figure showing three steps on how to export a trelliscopejs object. First, set
+#| the working directory to be your project folder. Next, call the script that 
+#| generates the trelliscopejs object on the R console. Do note that before
+#| calling the script on the R console, users must give the name 
+#| of the output folder to the path parameters as well as set self contained to false 
+#| in the trelliscope function.
+#| A correct execution will results in a desired folder being created. The folder should
+#| contain two folders called appfiles and lib respectively and a html file called index.
+#| Double clicking on the html file should open the trelliscopejs results. The last step
+#| is to compress the whole output folder as a zip file."
+
 knitr::include_graphics("images/Distribution1.JPG")
 ```
 
-.center[.footnote[https://jauntyjjs.github.io/RMedicine2022 [`r fa(name = "file-pdf")`](https://jauntyjjs.github.io/RMedicine2022/index.pdf)]
+.center[.footnote[https://jauntyjjs.github.io/RMedicine2022 [`r fa(name = "link")`](https://jauntyjjs.github.io/RMedicine2022) [`r fa(name = "github")`](https://github.com/JauntyJJS/RMedicine2022) [`r fa(name = "file-pdf")`](https://jauntyjjs.github.io/RMedicine2022/index.pdf)]
 ]
+
 
 ---
 ## Results Distribution
 
 To export a Quarto document with `trelliscopejs` object.
 
-```{r, out.width = "80%"}
+```{r, out.width = "65%"}
+#| fig.alt = 
+#| "Figure showing three steps on how to export a Quarto document contaning 
+#| trelliscopejs objects. First, set the working directory to be your project folder. 
+#| Next, click on the Render button to render the Quarto script. 
+#| rendering the script, users must give the name of the output folder to the path 
+#| parameters as well as set self contained to false in the trelliscope function.
+#| In addition, self contained must be set to false on the Quarto YAML header at the top
+#| of the Quarto script. 
+#| The trelliscope function should output a folder named after what user put in the
+#| path parameters. The Quarto knitr engine should generate relavent folders such
+#| as the images folder, name of Quarto script underscore files folder and a html file.
+#| being created. 
+#| The last step is to compress all these output files and folders 
+#| as a zip file."
+
 knitr::include_graphics("images/Distribution2.JPG")
 ```
 
-.center[.footnote[https://jauntyjjs.github.io/RMedicine2022 [`r fa(name = "file-pdf")`](https://jauntyjjs.github.io/RMedicine2022/index.pdf)]
+.center[.footnote[https://jauntyjjs.github.io/RMedicine2022 [`r fa(name = "link")`](https://jauntyjjs.github.io/RMedicine2022) [`r fa(name = "github")`](https://github.com/JauntyJJS/RMedicine2022) [`r fa(name = "file-pdf")`](https://jauntyjjs.github.io/RMedicine2022/index.pdf)]
 ]
+
 
 ---
 ## Results Distribution
@@ -366,11 +511,15 @@ knitr::include_graphics("images/Distribution2.JPG")
 Exported examples are found in the below [GitHub page](https://github.com/JauntyJJS/Trelliscopejs_In_Quarto_Example).
 
 ```{r, out.width = "90%"}
+#| fig.alt = 
+#| "Figure showing a GitHub page highlighting three zip files as exported example."
+
 knitr::include_graphics("images/Distribution3.JPG")
 ```
 
-.center[.footnote[https://jauntyjjs.github.io/RMedicine2022 [`r fa(name = "file-pdf")`](https://jauntyjjs.github.io/RMedicine2022/index.pdf)]
+.center[.footnote[https://jauntyjjs.github.io/RMedicine2022 [`r fa(name = "link")`](https://jauntyjjs.github.io/RMedicine2022) [`r fa(name = "github")`](https://github.com/JauntyJJS/RMedicine2022) [`r fa(name = "file-pdf")`](https://jauntyjjs.github.io/RMedicine2022/index.pdf)]
 ]
+
 
 ---
 ## Enjoy The Conference
@@ -388,6 +537,10 @@ Summary
 
 .pull-right[
 ```{r, out.width = "100%"}
+#| fig.alt = 
+#| "Figure showing two workers praising the presenter for
+#| providing a good visualisation report."
+
 knitr::include_graphics("images/business-team.JPG")
 ```
 ]
@@ -400,5 +553,6 @@ Images by [Amonrat Rungreangfangsai](https://www.vecteezy.com/members/amy1313)
 ]
 ]
 
-.center[.footnote[https://jauntyjjs.github.io/RMedicine2022 [`r fa(name = "file-pdf")`](https://jauntyjjs.github.io/RMedicine2022/index.pdf)]
+.center[.footnote[https://jauntyjjs.github.io/RMedicine2022 [`r fa(name = "link")`](https://jauntyjjs.github.io/RMedicine2022) [`r fa(name = "github")`](https://github.com/JauntyJJS/RMedicine2022) [`r fa(name = "file-pdf")`](https://jauntyjjs.github.io/RMedicine2022/index.pdf)]
 ]
+
