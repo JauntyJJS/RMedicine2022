@@ -27,6 +27,7 @@ library(xaringanExtra)
 
 xaringanExtra::use_slide_tone()
 xaringanExtra::use_webcam()
+xaringanExtra::use_fit_screen()
 ```
 
 
