@@ -116,7 +116,9 @@ class: middle, center, inverse
 # Viewing Multiple Inteactive Plots Using [`plotly`](https://plotly.com/r/) and [`trelliscopejs`](https://hafen.github.io/trelliscopejs/)
 
 .pull-left[
-```{r, out.width = "53%"}
+```{r out.width = "53%"}
+#| fig.alt = "Figure showing the R Medicine 2022 Conference logo."
+
 knitr::include_graphics("images/RMedicine_logo.JPG")
 ```
 
@@ -125,6 +127,8 @@ knitr::include_graphics("images/RMedicine_logo.JPG")
 
 .pull-right[
 ```{r, out.width = "100%"}
+#| fig.alt = "Figure showing the Injection Sequence Plot in trelliscopejs"
+
 knitr::include_graphics("images/title.JPG")
 ```
 
