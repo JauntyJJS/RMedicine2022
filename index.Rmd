@@ -28,6 +28,12 @@ library(xaringanExtra)
 xaringanExtra::use_slide_tone()
 xaringanExtra::use_webcam()
 xaringanExtra::use_fit_screen()
+xaringanExtra::use_tile_view()
+# xaringanExtra::embed_xaringan(
+#  url = "https://jauntyjjs.github.io/RMedicine2022",
+#  ratio = "16:9"
+# )
+xaringanExtra::use_share_again()
 ```
 
 
@@ -106,14 +112,6 @@ meta() %>%
   )
 ```
 
-```{r xaringanExtra-share-again, echo=FALSE}
-# xaringanExtra::embed_xaringan(
-#  url = "https://jauntyjjs.github.io/RMedicine2022",
-#  ratio = "16:9"
-# )
-xaringanExtra::use_share_again()
-```
-
 
 class: middle, center, inverse
 
@@ -126,7 +124,7 @@ class: middle, center, inverse
 knitr::include_graphics("images/RMedicine_logo.JPG")
 ```
 
-### R/Medicine 2022
+### R/Medicine 2022 [`r fa(name = "link")`](https://jeremy-selva.netlify.app/)
 ]
 
 .pull-right[
@@ -151,20 +149,53 @@ knitr::include_graphics("images/title.JPG")
 ]
 
 ---
+## Introduction to Lipids
+
+.pull-left[
+Lipids are organic compounds that are mostly insoluble in polar solvents like water.
+
+Example of lipids are
+ * Cholesterol and Triglycerides in blood lipid panel test
+ 
+ * Phospholipids in cell membrane
+ 
+ * Ceramides in skin
+]
+
+.pull-right[
+```{r, out.width = "95%"}
+#| fig.alt = 
+#| "Figures showing examples where lipids can be found.\n
+#| First figure on the top left is a picture of a trained medical professional drawing blood samples from a person's arm symbolising a blood lipid panel test.\n
+#| Lipids like cholesterol and triglycerides are usually measured in the blood lipid panel test.\n
+#| Second figure on the top right is a picture of a cell membrane displayed as a lipid bilayer made up of mainly phospholipids as well as other lipids like cholesterol and glycolipids.\n 
+#| Third Figure at the bottom shows the diverse role of ceramides and its metabolite sphingoid base in skin. Ceramides can be found in the outermost layer of the skin, serving as barrier protection against chemical or microbes. At the epidermis layer of the skin, ceramides assist in the role of cell differentiation and wound healing. Finally at the dermis layer of the skin, cell signaling roles of ceramide and its metabolites modulate immunity functions in the skin."
+
+knitr::include_graphics("images/Lipids.JPG")
+```
+]
+
+.left[
+.footnote[
+Blood sample and cell membrane images from [brgfx](https://www.freepik.com/vectors/cell-membrane)
+
+Skin image from [Uchida and Park 2021](https://link.springer.com/article/10.1007/s40257-021-00619-2)
+]
+]
+
+.center[.footnote[https://jauntyjjs.github.io/RMedicine2022 [`r fa(name = "link")`](https://jauntyjjs.github.io/RMedicine2022) [`r fa(name = "github")`](https://github.com/JauntyJJS/RMedicine2022) [`r fa(name = "file-pdf")`](https://jauntyjjs.github.io/RMedicine2022/index.pdf)]
+]
+
+---
 ## How Lipids are measured (Targeted Lipidomics)
 
 ```{r, out.width = "90%"}
 #| fig.alt = 
-#| "Figure showing the workflow of how lipids are measured in a targeted
-#| lipidomics settings. Samples are first converted to lipid extracts.
-#| From a given list of transitions to measure, lipids in the extracts are 
-#| measured using liquid chromatography and mass spectrometry. In the example,
-#| a transition from an internal standard Ceramide d 18 1 12 0 is measured. 
-#| This results in chromatogram peaks which the user needs to 
-#| integrate the area under curve. In the case of the internal standard 
-#| Ceramide d 18 1 12 0, it is 479025.  
-#| After the peaks are integrated for all samples and transtions,
-#| the peak area data is exported for further processing."
+#| "Figure showing the workflow of how lipids are measured in a targeted lipidomics settings.\n
+#| Samples are first converted to lipid extracts. From a given list of transitions to measure, lipids in the extracts are measured using liquid chromatography and mass spectrometry. In the example, a transition from an internal standard Ceramide d 18 1 12 0 is measured. This results in chromatogram peaks which the user needs to 
+#| integrate the area under curve.\n
+#| In the case of the internal standard Ceramide d 18 1 12 0, it is four hundred and seventy nine thousand and twenty five.\n 
+#| After the peaks are integrated for all samples and transtions, the peak area data are exported for further processing."
 
 knitr::include_graphics("images/Targeted_Lipidomics.JPG")
 ```
@@ -184,8 +215,8 @@ knitr::include_graphics("images/Targeted_Lipidomics.JPG")
 ```{r, out.width = "90%"}
 #| fig.alt = 
 #| "Figure showing the stages in the targeted lipidomics settings in which
-#| unwanted or non biological variation can occur. It is usually during the 
-#| stage of lipid extraction or measruement."
+#|  unwanted or non sample related variation can occur. It is usually during the 
+#|  stage of lipid extraction or measurement."
 #| 
 knitr::include_graphics("images/Unwanted_Variation.JPG")
 ```
@@ -202,13 +233,10 @@ One example is the Batch Quality Control (BQC) to measure variation during lipid
 
 ```{r, out.width = "100%"}
 #| fig.alt = 
-#| "Two figures showing what is a batch quality control (BQC). Left figure shows
-#| that BQC samples are created by first pooling the sample aliquots. The pooled
-#| sample is then aliquoted into smaller amounts in new eppendorf tubes. These
-#| pooled samples in the eppendorf tubes are the BQC samples. Right figure shows
-#| where in the injection sequence are the BQC samples place. They are usually placed
-#| in between samples at regular intervals, for example every five samples, as well as
-#| before the first sample and after the last sample."
+#| "Two figures showing what is a batch quality control (BQC).\n
+#| Left figure shows how the BQC samples are created. They are created by first pooling the sample aliquots. 
+#| The pooled sample is then aliquoted into new eppendorf tubes. These aliquoted pooled samples in the eppendorf tubes are the BQC samples.\n
+#| Right figure shows where in the injection sequence are the BQC samples placed. They are usually placed before the first sample, in between samples at regular intervals, for example every five samples, and after the last sample."
  
 knitr::include_graphics("images/BQC_Intro.JPG")
 ```
@@ -228,14 +256,9 @@ Report results as a pdf file of injection sequence bar charts. (One transition p
 
 ```{r, out.width = "90%"}
 #| fig.alt = 
-#| "Figure showing an injection sequence of internal standard 
-#| Ceramide d 18 1 12 0 as a bar chart. The y axis is peak area while
-#| the x axis is the injection sequence. The different colours on the
-#| bar chart repsresent the different QC sample type. The important ones
-#| are the ones in blue representing the BQC. The coefficient of variation
-#| of the BQC is around 0.09 which is a low value. Hence, 
-#| the internal standard Ceramide d 18 1 12 0 has a low interference from
-#| unwanted sources. This injection sequence bar chart is exported as a pdf file."
+#| "Figure showing an injection sequence of internal standard Ceramide d 18 1 12 0 as a bar chart.\n 
+#| The y axis is peak area while the x axis is the injection sequence. The different colours on the bar chart repsresent the different QC sample type. The important ones are the ones in blue representing the BQC.\n
+#| The coefficient of variation of the BQC is around 0.09 which is a low value. Hence, the internal standard Ceramide d 18 1 12 0 has a low interference from unwanted sources. This injection sequence bar chart is exported as a pdf file."
 
 knitr::include_graphics("images/Injection_Sequence_Plot.JPG")
 ```
@@ -253,14 +276,11 @@ Number of samples are getting larger (increase to few thousands).
 
 Static bar charts and scatter plots will not work.
 
-```{r, out.width = "100%"}
+```{r, out.width = "95%"}
 #| fig.alt = 
-#| "Figure showing an injection sequence of internal standard 
-#| Ceramide d 18 1 12 0 as a bar chart. The y axis is peak area while
-#| the x axis is the injection sequence. The different colours on the
-#| bar chart repsresent the different QC sample type. A black arrow is shown
-#| at the bottom right of the plot connecting to the x-axis. The arrow
-#| highlights that the injection sequence can increase to a few thousands."
+#| "Figure showing an injection sequence of internal standard Ceramide d 18 1 12 0 as a bar chart.\n
+#| The y axis is peak area while the x axis is the injection sequence. The different colours on the bar chart repsresent the different QC sample type.\n
+#| A black arrow is shown at the bottom right of the plot connecting to the x-axis. The arrow highlights that the injection sequence can increase to a few thousands."
 
 knitr::include_graphics("images/Motivation1.JPG")
 ```
@@ -276,9 +296,8 @@ Number of transitions have increased to over $500$. This give a $> 500$-pages pd
 
 ```{r, out.width = "100%"}
 #| fig.alt = 
-#| "Figure showing a long transition list contaning more than 500 transitions.
-#| The arrow on the right of the transition list leads to pictures of
-#| more than 500 injection sequence plots."
+#| "Figure showing a long transition list contaning more than 500 transitions.\n
+#| The arrow on the right of the transition list leads to pictures of more than 500 injection sequence plots."
 
 
 knitr::include_graphics("images/Motivation2.JPG")
@@ -295,10 +314,8 @@ Different QC sample types give rise to different plot type, resulting in .red[mu
 
 ```{r, out.width = "100%"}
 #| fig.alt = 
-#| "Left figure showing a long list of QC sample types, leading to new plots such as
-#| a raincloud plot as well as a dilution plot. This give rise to an output of 
-#| many pdf files, each at least 500 pages long. Right figure is showing a worker 
-#| overwhelmed with many files of plots. The worker is carrying a sign calling for help."
+#| "Left figure is showing a long list of QC sample types, leading to new plots such as a raincloud plot as well as a dilution plot. This give rise to an output of many pdf files, each at least 500 pages long.\n
+#| Right figure is showing a worker overwhelmed with many files of plots. The worker is carrying a sign calling for help."
 
 
 knitr::include_graphics("images/Motivation3.JPG")
@@ -320,7 +337,7 @@ Images by [Amonrat Rungreangfangsai](https://www.vecteezy.com/members/amy1313)
 .pull-left[
 Using [`plotly`](https://plotly.com/r/) to create interactive plots is moving in the right direction. 
 
-However, distribution of such results to collaborators/managers remains a challenge. 
+However, distribution of such results to collaborators/managers remain a challenge. 
 
 Interactive plots cannot be stored in pdf files.
 
@@ -333,11 +350,9 @@ Interactive plots cannot be stored in pdf files.
 .pull-right[
 ```{r, out.width = "90%"}
 #| fig.alt = 
-#| "Figure showing the a workflow using plotly and trelliscopejs. 
-#| plotly and trelliscopejs represented by ther logos are used to create
-#| a folder called Dilution Plot Folder. The Dilution Plot Folder contains
-#| a appfile folder, a lib folder and a html file call index. The folder is
-#| then compressed into a zip folder called Dilution Plot Folder."
+#| "Figure showing the a workflow using plotly and trelliscopejs.\n
+#| plotly and trelliscopejs, represented by ther logos, are used to create a folder called Dilution Plot Folder.\n
+#| The Dilution Plot Folder contains a appfile folder, a lib folder and a html file call index. The folder is then compressed into a zip folder called Dilution Plot Folder."
 #| 
 knitr::include_graphics("images/Motivation4.JPG")
 ```
@@ -371,12 +386,9 @@ Thanks to open science, I am able to create a walk through example using Quarto 
 
 ```{r, out.width = "90%"}
 #| fig.alt = 
-#| "Left figure showing a Nature Communications paper by Wolrab et. al. 
-#| published on 10 January 2022. The paper is titled Lipidomics profiling 
-#| of human serum enables detection of pancreatic cancer. This is followed 
-#| by highlighted text showing where to download the dataset used for the
-#| paper. Right figure shows the use of the published data set to create
-#| a Quarto interactive document with the use of plotly and trelliscopejs."
+#| "Left figure showing a Nature Communications paper by Wolrab et. al. published on 10 January 2022. The paper is titled Lipidomics profiling of human serum enables detection of pancreatic cancer. This is followed by highlighted text showing where to download the data set used for the paper.\n
+#| They can be found in sections Data Availiabilty: RP-UHPLC/MS Phase 2 and Supplementary Information: Supplementary Data 1 to 20.\n
+#| Right figure shows the use of the published data set to create a Quarto interactive document with the use of plotly and trelliscopejs."
 
 
 knitr::include_graphics("images/Open_Science.JPG")
@@ -393,18 +405,16 @@ Images from [Wolrab et. al 2022](https://doi.org/10.1038/s41467-021-27765-9)
 
 
 ---
-## Vector Of Plots
+## Column Of Plots
 
 Use [`dplyr::mutate`](https://dplyr.tidyverse.org/reference/mutate.html) and [`trelliscopejs::pmap_plot`](https://hafen.github.io/trelliscopejs/reference/map2_plot.html) to save [`plotly`](https://plotly.com/r/) plots as a new column.
 
 ```{r, out.width = "100%"}
 #| fig.alt = 
-#| "Figure showing how to create a new column containing a vector of plots.
-#| dplyr mutate is used to create the new column called dilution panel.
-#| trelliscopejs pmap plot is used to create the individual dilution plots
-#| in plotly. To print the dilution plot of the first row, type the command
-#| dilution_plot_table$dilution_panel[[1]]. The dilution plot results can
-#| be seen on the rightmost figure."
+#| "Figure showing how to create a new column containing a column of plots.\n
+#| dplyr mutate is used to create the new column called dilution panel.\n
+#| trelliscopejs pmap_plot is used to create the individual dilution plots in plotly.\n 
+#| To print the dilution plot of the first row, type the command dilution_plot_table$dilution_panel[[1]]. The dilution plot results can be seen on the rightmost figure."
 
 knitr::include_graphics("images/Vector_of_Plots.JPG")
 ```
@@ -418,12 +428,9 @@ Use [`manipulateWidget::combineWidgets`](https://cran.r-project.org/web/packages
 
 ```{r, out.width = "100%"}
 #| fig.alt = 
-#| "Left figure showing how to use the combined widgets function from 
-#| manipulate widget to arrange four dilution plots in tow rows and cols. 
-#| Simply set parameters ncol = 2 and nrow = 2. Right figure showing 
-#| how to use subplot function from plotly to allow the injection
-#| sequence plot and the raincloud plot to share the same x-axis and legend.
-#| This is done by setting share Y as TRUE."
+#| "Left figure showing how to use the combined widgets function from manipulate widget to arrange four dilution plots in tow rows and columns.\n 
+#| Simply set parameters ncol = 2 and nrow = 2.\n
+#| Right figure showing how to use subplot function from plotly to allow the injection sequence plot and the raincloud plot to share the same x-axis and legend. This is done by setting shareY as TRUE."
 
 knitr::include_graphics("images/Combined_Plots.JPG")
 ```
@@ -439,14 +446,11 @@ Providing metadata information as `trelliscopejs` cognostics can help to improve
 
 ```{r, out.width = "80%"}
 #| fig.alt = 
-#| "Left figure showing how to find the list of cognostics in a result
-#| generated by trelliscopejs. Just click on the information button 
-#| beside the trellis plot title, in the example, the title is Injection
-#| sequence plot. Following left bottom figure shows a filter panel with
-#| the cognostic information of product ion button displayed as 'ions created from
-#| fragmentation of the precursor ions' when the mouse if hover on the
-#| product ion button. Right figure shows a Quarto document telling users how
-#| to create trelliscopejs cognostics from metadata information."
+#| "Left figure shows how to find the list of cognostics in a result generated by trelliscopejs. Just click on the information button beside the trellis plot title.\n
+#| In the example, the title is Injection_Sequence_Plot.\n
+#| Following left bottom figure shows a filter panel with the cognostic information of the product ion button.\n 
+#| The cognostics is displayed as 'ions created from fragmentation of the precursor ions' when the mouse if hover on the product ion button.\n
+#| Right figure shows a Quarto document telling users how to create trelliscopejs cognostics from metadata information."
 
 
 knitr::include_graphics("images/Cognostics.JPG")
@@ -463,16 +467,14 @@ To export a `trelliscopejs` object.
 
 ```{r, out.width = "70%"}
 #| fig.alt = 
-#| "Figure showing three steps on how to export a trelliscopejs object. First, set
-#| the working directory to be your project folder. Next, call the script that 
-#| generates the trelliscopejs object on the R console. Do note that before
-#| calling the script on the R console, users must give the name 
-#| of the output folder to the path parameters as well as set self contained to false 
-#| in the trelliscope function.
-#| A correct execution will results in a desired folder being created. The folder should
-#| contain two folders called appfiles and lib respectively and a html file called index.
-#| Double clicking on the html file should open the trelliscopejs results. The last step
-#| is to compress the whole output folder as a zip file."
+#| "Figure showing three steps on how to export a trelliscopejs object.\n 
+#| First, set the working directory to be your project folder.\n 
+#| Next, call the script that generates the trelliscopejs object on the R console.\n 
+#| Do note that before calling the script on the R console, users must give the name of the output folder to the path parameters as well as set self_contained to false in the trelliscope function.\n
+#| A correct execution will results in a desired folder being created.\n 
+#| The folder should contain two folders called appfiles and lib respectively and a html file called index.\n
+#| Double clicking on the html file should open the trelliscopejs results.\n 
+#| The last step is to compress the whole output folder as a zip file."
 
 knitr::include_graphics("images/Distribution1.JPG")
 ```
@@ -488,19 +490,15 @@ To export a Quarto document with `trelliscopejs` object.
 
 ```{r, out.width = "65%"}
 #| fig.alt = 
-#| "Figure showing three steps on how to export a Quarto document contaning 
-#| trelliscopejs objects. First, set the working directory to be your project folder. 
-#| Next, click on the Render button to render the Quarto script. 
-#| rendering the script, users must give the name of the output folder to the path 
-#| parameters as well as set self contained to false in the trelliscope function.
-#| In addition, self contained must be set to false on the Quarto YAML header at the top
-#| of the Quarto script. 
-#| The trelliscope function should output a folder named after what user put in the
-#| path parameters. The Quarto knitr engine should generate relavent folders such
-#| as the images folder, name of Quarto script underscore files folder and a html file.
-#| being created. 
-#| The last step is to compress all these output files and folders 
-#| as a zip file."
+#| "Figure showing three steps on how to export a Quarto document containing trelliscopejs objects.\n 
+#| First, set the working directory to be your project folder.\n 
+#| Next, click on the Render button to render the Quarto script.\n 
+#| Before rendering the script, users must give the name of the output folder to the path parameters as well as set self contained to false in the trelliscope function.\n 
+#| In addition, self_contained must be set to false on the Quarto YAML header at the top of the Quarto script.\n 
+#| The trelliscope function should output a folder named after what user put in the path parameters.\n
+#| The Quarto knitr engine should generate relevant folders such as a folder titled images, a folder titled name of Quarto script_files and a html file titled name of Quarto script_file.html.
+#| being created.\n 
+#| The last step is to compress all these output files and folders as a zip file."
 
 knitr::include_graphics("images/Distribution2.JPG")
 ```
@@ -542,8 +540,7 @@ Summary
 .pull-right[
 ```{r, out.width = "100%"}
 #| fig.alt = 
-#| "Figure showing two workers praising the presenter for
-#| providing a good visualisation report."
+#| "Figure showing two workers praising the presenter for providing a good visualisation report."
 
 knitr::include_graphics("images/business-team.JPG")
 ```
