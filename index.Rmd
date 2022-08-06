@@ -291,7 +291,7 @@ knitr::include_graphics("images/Motivation1.JPG")
 ---
 ## Motivation for using [`plotly`](https://plotly.com/r/) and [`trelliscopejs`](https://hafen.github.io/trelliscopejs/)
 
-Number of transitions have increased to over $500$. This give a $> 500$-pages pdf file full of plots.
+Number of transitions have increased to .red[over 500]. This give a pdf file of .red[over 500 pages] full of plots.
 
 ```{r, out.width = "100%"}
 #| fig.alt = 
@@ -309,9 +309,9 @@ knitr::include_graphics("images/Motivation2.JPG")
 ---
 ## Motivation for using [`plotly`](https://plotly.com/r/) and [`trelliscopejs`](https://hafen.github.io/trelliscopejs/)
 
-Different QC sample types give rise to different plot type, resulting in .red[multiple] $> 500$-page.red[s] pdf files.
+Different QC sample types give rise to different types of plots, resulting in the creation of .red[multiple] pdf files of .red[over 500 pages].
 
-```{r, out.width = "100%"}
+```{r, out.width = "90%"}
 #| fig.alt = 
 #| "Left figure is showing a long list of QC sample types, leading to new plots such as a raincloud plot as well as a dilution plot. This give rise to an output of many pdf files, each at least 500 pages long.\n
 #| Right figure is showing a worker overwhelmed with many files of plots. The worker is carrying a sign calling for help."
