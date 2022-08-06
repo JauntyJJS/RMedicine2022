@@ -124,7 +124,7 @@ class: middle, center, inverse
 knitr::include_graphics("images/RMedicine_logo.JPG")
 ```
 
-### R/Medicine 2022 [`r fa(name = "link")`](https://jeremy-selva.netlify.app/)
+### R/Medicine 2022 [`r fa(name = "link")`](https://events.linuxfoundation.org/r-medicine/) [`r fa(name = "twitter")`](https://twitter.com/r_medicine)
 ]
 
 .pull-right[
