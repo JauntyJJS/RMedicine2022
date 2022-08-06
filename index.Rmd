@@ -375,6 +375,12 @@ knitr::include_graphics("images/Motivation4.JPG")
 <iframe width="1000" height="600" src="https://jauntyjjs.github.io/Trelliscopejs_In_Quarto_Supplementary1/" alt="A trelliscopejs result displaying the injection sequence plot and dilution plot. Users can interact with the plot results to draw useful information. Samples can be filtered by clicking on the legends. Sliders are provided to give the samples a closer look. Figures can be filtered and sorted by different metadata properties." ></iframe>
 </p>
 
+.left[
+.footnote[
+Embedded trelliscopejs results in [`r fa(name = "link")`](https://jauntyjjs.github.io/Trelliscopejs_In_Quarto_Supplementary1/) [`r fa(name = "github")`](https://github.com/JauntyJJS/Trelliscopejs_In_Quarto_Supplementary1)
+]
+]
+
 .center[.footnote[https://jauntyjjs.github.io/RMedicine2022 [`r fa(name = "link")`](https://jauntyjjs.github.io/RMedicine2022) [`r fa(name = "github")`](https://github.com/JauntyJJS/RMedicine2022) [`r fa(name = "file-pdf")`](https://jauntyjjs.github.io/RMedicine2022/index.pdf)]
 ]
 
@@ -387,7 +393,7 @@ Thanks to open science, I am able to create a walk through example using Quarto 
 ```{r, out.width = "90%"}
 #| fig.alt = 
 #| "Left figure showing a Nature Communications paper by Wolrab et. al. published on 10 January 2022. The paper is titled Lipidomics profiling of human serum enables detection of pancreatic cancer. This is followed by highlighted text showing where to download the data set used for the paper.\n
-#| They can be found in sections Data Availiabilty: RP-UHPLC/MS Phase 2 and Supplementary Information: Supplementary Data 1 to 20.\n
+#| They can be found in sections Data Availabilty: RP-UHPLC/MS Phase 2 and Supplementary Information: Supplementary Data 1 to 20.\n
 #| Right figure shows the use of the published data set to create a Quarto interactive document with the use of plotly and trelliscopejs."
 
 
