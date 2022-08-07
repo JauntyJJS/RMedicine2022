@@ -498,8 +498,8 @@ To export a Quarto document with `trelliscopejs` object.
 #| "Figure showing three steps on how to export a Quarto document containing trelliscopejs objects.\n 
 #| First, set the working directory to be your project folder.\n 
 #| Next, click on the Render button to render the Quarto script.\n 
-#| Before rendering the script, users must give the name of the output folder to the path parameters as well as set self contained to false in the trelliscope function.\n 
-#| In addition, self_contained must be set to false on the Quarto YAML header at the top of the Quarto script.\n 
+#| Before rendering the script, users must give the name of the output folder to the path parameters as well as set self_contained to false in the trelliscope function.\n 
+#| In addition, self-contained must be set to false on the Quarto YAML header at the top of the Quarto script.\n 
 #| The trelliscope function should output a folder named after what user put in the path parameters.\n
 #| The Quarto knitr engine should generate relevant folders such as a folder titled images, a folder titled name of Quarto script_files and a html file titled name of Quarto script_file.html.
 #| being created.\n 
