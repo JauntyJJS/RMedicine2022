@@ -515,11 +515,11 @@ knitr::include_graphics("images/Distribution2.JPG")
 ---
 ## Results Distribution
 
-Exported examples are found in the below [GitHub page](https://github.com/JauntyJJS/Trelliscopejs_In_Quarto_Example).
+Exported examples are found under the [Releases](https://github.com/JauntyJJS/Trelliscopejs_In_Quarto_Example/releases) section in the below [GitHub page](https://github.com/JauntyJJS/Trelliscopejs_In_Quarto_Example).
 
-```{r, out.width = "90%"}
+```{r, out.width = "190%"}
 #| fig.alt = 
-#| "Figure showing a GitHub page highlighting three zip files as exported example."
+#| "Figure showing a GitHub page highlighting where the Releases section is. Double clicking on the Releases section will bring users to the exported examples which can be downloaded as zip files."
 
 knitr::include_graphics("images/Distribution3.JPG")
 ```
