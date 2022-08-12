@@ -336,7 +336,7 @@ Images by [Amonrat Rungreangfangsai](https://www.vecteezy.com/members/amy1313)
 .pull-left[
 Using [`plotly`](https://plotly.com/r/) to create interactive plots is moving in the right direction. 
 
-However, distribution of such results to collaborators/managers remain a challenge. 
+However, distribution of such results to collaborators/managers remains a challenge. 
 
 Interactive plots cannot be stored in pdf files.
 
