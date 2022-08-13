@@ -426,23 +426,6 @@ knitr::include_graphics("images/Vector_of_Plots.JPG")
 
 .center[.footnote[https://jauntyjjs.github.io/RMedicine2022 [`r fa(name = "link")`](https://jauntyjjs.github.io/RMedicine2022) [`r fa(name = "github")`](https://github.com/JauntyJJS/RMedicine2022) [`r fa(name = "file-pdf")`](https://jauntyjjs.github.io/RMedicine2022/index.pdf)]
 ]
----
-## Patching `plotly` Plots
-
-Use [`manipulateWidget::combineWidgets`](https://cran.r-project.org/web/packages/manipulateWidget/vignettes/manipulateWidgets.html) and [`plotly::subplot`](https://plotly.com/r/subplots/) to patch different [`plotly`](https://plotly.com/r/) plots.
-
-```{r, out.width = "100%"}
-#| fig.alt = 
-#| "Left figure showing how to use the combined widgets function from manipulate widget to arrange four dilution plots in tow rows and columns.\n 
-#| Simply set parameters ncol = 2 and nrow = 2.\n
-#| Right figure showing how to use subplot function from plotly to allow the injection sequence plot and the raincloud plot to share the same x-axis and legend. This is done by setting shareY as TRUE."
-
-knitr::include_graphics("images/Combined_Plots.JPG")
-```
-
-.center[.footnote[https://jauntyjjs.github.io/RMedicine2022 [`r fa(name = "link")`](https://jauntyjjs.github.io/RMedicine2022) [`r fa(name = "github")`](https://github.com/JauntyJJS/RMedicine2022) [`r fa(name = "file-pdf")`](https://jauntyjjs.github.io/RMedicine2022/index.pdf)]
-]
-
 
 ---
 ## `trelliscopejs` cognostics
